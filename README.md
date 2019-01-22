@@ -18,11 +18,13 @@ In order to solve this problem through reinforcement learning, we need to restat
 
 In order to get an optimal trading weights, our state vector must tell us how many shares are remaining to be sold and how much time is remaining to sell them. By showing the number of trades remaining, we will know about the time remaining to sell the remaining shares. We also need to know what the stock price trend was in the recent past to determine current strategy. Hence we will also include log returns of past five trades. The state vector looks as follows - 
 
-[r<sub>(t-5)</sub>,r<sub>(t-4)</sub>,r<sub>(t-3)</sub>,r<sub>(t-2)</sub>,r<sub>(t-1)</sub>,r<sub>t</sub>, M<sub>t</sub>, I<sub>t</sub> ] where 
+[ r<sub>(t-5)</sub>, r<sub>(t-4)</sub>, r<sub>(t-3)</sub>, r<sub>(t-2)</sub>, r<sub>(t-1)</sub>, r<sub>t</sub>, M<sub>t</sub>, I<sub>t</sub> ] 
 
-- r(t-i) = normalized log return at time t-i.
-- Mt = number of trades remaining at time t, normalized by total number of trades.
-- It = number of shares remaining to sell at time t, normalized by total number of shares.
+where 
+
+- rr<sub>(t-i)</sub> = normalized log return at time t-i.
+- M<sub>t</sub>= number of trades remaining at time t, normalized by total number of trades.
+- I<sub>t</sub>  = number of shares remaining to sell at time t, normalized by total number of shares.
 
 Please note that more stock related parameters can be added to the state like leading or lagging financial indicators.
 
