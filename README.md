@@ -11,4 +11,6 @@ In this repository, I will show how this can be done for a finance related probl
 
 Please see the report.pdf file for full description.
 
+The basic code for this project was provided by Udacity. I modified it to simulate the stock prices based on a more realistic Geometric Brownian Motion.
+
 
